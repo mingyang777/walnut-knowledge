@@ -113,10 +113,4 @@ npm start
 
 实现「任意设备访问网站 + 多电脑修改代码/知识库」，详见 **[DEPLOY.md](./DEPLOY.md)**。
 
-简要流程：
-
-1. 代码 push 到 GitHub
-2. Vercel 导入仓库，自动部署
-3. 在 Vercel 配置 `OPENAI_API_KEY` 等环境变量
-4. 换电脑时 `git clone`，改完 `git push` 即自动更新线上网站
-5. 知识库数据在 `src/data/knowledge-base.json`，随 Git 同步
+> **国内用户注意**：Vercel 在国内经常无法访问。请改用 **[DEPLOY-TENCENT.md](./DEPLOY-TENCENT.md)** 部署到腾讯云，国内访问更稳定。
