@@ -3,6 +3,7 @@ import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import type { WalnutVariety } from "@/types/walnut";
 import { getCategoryName } from "@/lib/knowledge";
+import { getVarietyImagePosition } from "@/lib/variety-images";
 
 interface VarietyCardProps {
   variety: WalnutVariety;
@@ -22,6 +23,7 @@ export default function VarietyCard({ variety }: VarietyCardProps) {
           alt={variety.name}
           fill
           className="object-cover transition duration-300 group-hover:scale-105"
+          style={{ objectPosition: getVarietyImagePosition(variety.id) }}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

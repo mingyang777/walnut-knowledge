@@ -10,7 +10,16 @@ import {
   Tag,
   XCircle,
 } from "lucide-react";
-import { getCategoryName, getVarietyById } from "@/lib/knowledge";
+import {
+  getCategoryName,
+  getRelatedVarieties,
+  getVarietyById,
+} from "@/lib/knowledge";
+import RelatedVarieties from "@/components/RelatedVarieties";
+import {
+  getVarietyImagePosition,
+  IMAGE_ATTRIBUTION,
+} from "@/lib/variety-images";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -24,6 +33,7 @@ export default async function VarietyDetailPage({ params }: PageProps) {
     notFound();
   }
 
+  const related = getRelatedVarieties(id);
   const { primary, secondary } = getCategoryName(
     variety.primaryCategory,
     variety.secondaryCategory
@@ -40,16 +50,29 @@ export default async function VarietyDetailPage({ params }: PageProps) {
       </Link>
 
       <div className="card overflow-hidden">
-        <div className="relative aspect-[16/9] bg-walnut-100 sm:aspect-[2/1]">
-          <Image
-            src={variety.images[0]}
-            alt={variety.name}
-            fill
-            className="object-cover"
-            priority
-            sizes="(max-width: 768px) 100vw, 896px"
-          />
+        <div className="grid gap-1 sm:grid-cols-2">
+          {variety.images.slice(0, 2).map((src, index) => (
+            <div
+              key={src}
+              className={`relative bg-walnut-100 ${
+                index === 0 ? "aspect-[4/3] sm:aspect-square" : "aspect-[4/3]"
+              }`}
+            >
+              <Image
+                src={src}
+                alt={`${variety.name} 参考图 ${index + 1}`}
+                fill
+                className="object-cover"
+                style={{ objectPosition: getVarietyImagePosition(variety.id) }}
+                priority={index === 0}
+                sizes="(max-width: 768px) 100vw, 448px"
+              />
+            </div>
+          ))}
         </div>
+        <p className="border-b border-walnut-100 px-4 py-2 text-xs text-walnut-500">
+          {IMAGE_ATTRIBUTION}
+        </p>
 
         <div className="p-6 sm:p-8">
           <div className="flex flex-wrap items-center gap-2">
@@ -171,6 +194,8 @@ export default async function VarietyDetailPage({ params }: PageProps) {
           </div>
         </div>
       </div>
+
+      <RelatedVarieties varieties={related} />
     </div>
   );
 }

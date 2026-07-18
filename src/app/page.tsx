@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { BookOpen, Camera, Search, Sparkles } from "lucide-react";
-import { getCategories, getVarieties } from "@/lib/knowledge";
+import { getCategories, getFeaturedVarieties, getVarieties } from "@/lib/knowledge";
 import VarietyCard from "@/components/VarietyCard";
 
 export default function HomePage() {
-  const varieties = getVarieties();
+  const allVarieties = getVarieties();
   const categories = getCategories();
-  const featured = varieties.slice(0, 3);
+  const featured = getFeaturedVarieties().slice(0, 6);
 
   return (
     <div>
@@ -26,7 +26,7 @@ export default function HomePage() {
             品种文化与鉴别艺术
           </h1>
           <p className="mt-4 max-w-2xl text-base text-walnut-200 sm:text-lg">
-            收录 {varieties.length} 个经典品种，涵盖历史渊源、辨认技巧与价格参考。
+            收录 40 个经典品种，涵盖历史渊源、辨认技巧与价格参考。
             支持分类检索与 AI 智能识图，助你快速入门、精准选购。
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
@@ -94,7 +94,7 @@ export default function HomePage() {
         <h2 className="font-serif text-2xl font-bold text-walnut-900">品类概览</h2>
         <div className="mt-6 grid gap-4 sm:grid-cols-3">
           {categories.map((cat) => {
-            const count = varieties.filter((v) => v.primaryCategory === cat.id).length;
+            const count = allVarieties.filter((v) => v.primaryCategory === cat.id).length;
             return (
               <Link
                 key={cat.id}
