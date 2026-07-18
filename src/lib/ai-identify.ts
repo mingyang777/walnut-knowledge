@@ -32,7 +32,9 @@ async function identifyWithOpenAI(
 ): Promise<IdentificationResult> {
   const apiKey = process.env.OPENAI_API_KEY;
   if (!apiKey) {
-    throw new Error("未配置 OPENAI_API_KEY，请在 .env.local 中设置");
+    throw new Error(
+      "未配置 OPENAI_API_KEY。本地开发请在 .env.local 设置；线上部署请在 Vercel/腾讯云云托管的环境变量中设置。"
+    );
   }
 
   const model = process.env.OPENAI_MODEL ?? "gpt-4o";
@@ -88,7 +90,9 @@ async function identifyWithDashscope(
 ): Promise<IdentificationResult> {
   const apiKey = process.env.DASHSCOPE_API_KEY;
   if (!apiKey) {
-    throw new Error("未配置 DASHSCOPE_API_KEY，请在 .env.local 中设置");
+    throw new Error(
+      "未配置 DASHSCOPE_API_KEY。本地开发请在 .env.local 设置；线上部署请在 Vercel/腾讯云云托管的环境变量中设置。"
+    );
   }
 
   const model = process.env.DASHSCOPE_MODEL ?? "qwen-vl-max";

@@ -5,9 +5,30 @@
       "name": "麻核桃",
       "description": "文玩核桃主流品类，纹理丰富、包浆性好，是玩家收藏把玩的首选。",
       "children": [
-        { "id": "classic", "name": "传统名核" },
-        { "id": "regional", "name": "产区特色" },
-        { "id": "grafted", "name": "嫁接新品" }
+        {
+          "id": "shizitou-class",
+          "name": "狮子头类"
+        },
+        {
+          "id": "hutou-class",
+          "name": "虎头类"
+        },
+        {
+          "id": "gongzimao-class",
+          "name": "公子帽类"
+        },
+        {
+          "id": "guanmao-class",
+          "name": "官帽类"
+        },
+        {
+          "id": "jixin-class",
+          "name": "鸡心类"
+        },
+        {
+          "id": "other-mahe",
+          "name": "其他麻核桃"
+        }
       ]
     },
     {
@@ -15,17 +36,33 @@
       "name": "铁核桃",
       "description": "壳厚质坚、密度高，纹路深刻，适合追求质感的资深玩家。",
       "children": [
-        { "id": "yunnan", "name": "云南铁核桃" },
-        { "id": "sichuan", "name": "四川铁核桃" }
+        {
+          "id": "yunnan-tiehe",
+          "name": "云南铁核"
+        },
+        {
+          "id": "special-tiehe",
+          "name": "异形铁核"
+        }
       ]
     },
     {
-      "id": "yehe",
-      "name": "野核桃",
-      "description": "自然生长、形态各异，具有独特的野趣与收藏价值。",
+      "id": "qiuzi",
+      "name": "秋子核桃",
+      "description": "自然秋子类核桃，形态多样、野趣十足，是追求个性与自然之美的玩家的选择。",
       "children": [
-        { "id": "wild-classic", "name": "经典野核" },
-        { "id": "wild-rare", "name": "稀有野核" }
+        {
+          "id": "lantern-qiuzi",
+          "name": "灯笼类"
+        },
+        {
+          "id": "jujube-qiuzi",
+          "name": "枣核类"
+        },
+        {
+          "id": "special-qiuzi",
+          "name": "特色秋子"
+        }
       ]
     }
   ],
@@ -33,194 +70,1841 @@
     {
       "id": "shizitou",
       "name": "狮子头",
-      "alias": ["矮桩狮子", "老款狮子"],
+      "alias": [
+        "矮桩狮子",
+        "老款狮子"
+      ],
       "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
+      "secondaryCategory": "shizitou-class",
       "origin": "河北涞水",
       "introduction": "狮子头是麻核桃中最经典的品种之一，因纹路圆润饱满、形似狮子头部而得名。矮桩、大肚、平底是其典型特征，盘玩后包浆温润，深受新手与老玩家喜爱。",
-      "history": "狮子头起源于河北涞水一带，明清时期便已有记载。清代宫廷文玩中常见类似形态的核桃，民间则因其吉祥寓意广受欢迎。近二十年来随着文玩市场兴起，狮子头一直是交易量最大的品种之一。",
-      "priceRange": { "min": 300, "max": 8000, "unit": "元/对", "notes": "普通对子数百元，精品矮桩、六面精配可达数千至上万元。" },
-      "identificationTips": ["矮桩大肚，整体轮廓圆润饱满", "纹路舒展如肉，沟壑相对较浅", "底部多为平底或微凹底", "两侧观察呈对称的狮子头轮廓", "皮质细腻，上手沉稳"],
-      "pros": ["经典保值，流通性好", "包浆速度快", "手感舒适圆润", "适合新手入门"],
-      "cons": ["精品稀少，好配对难", "普通对子纹路可能较浅", "市场仿品与嫁接品较多"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["经典", "入门首选", "麻核桃"]
+      "history": "狮子头起源于河北涞水一带，明清时期便已有记载。清代宫廷文玩中常见类似形态的核桃，近二十年来一直是交易量最大的品种之一。",
+      "priceRange": {
+        "min": 300,
+        "max": 8000,
+        "notes": "普通对子数百元，精品矮桩、六面精配可达数千至上万元。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "矮桩大肚，整体轮廓圆润饱满",
+        "纹路舒展如肉，沟壑相对较浅",
+        "底部多为平底或微凹底",
+        "两侧观察呈对称的狮子头轮廓",
+        "皮质细腻，上手沉稳"
+      ],
+      "pros": [
+        "经典保值，流通性好",
+        "包浆速度快",
+        "手感舒适圆润",
+        "适合新手入门"
+      ],
+      "cons": [
+        "精品稀少，好配对难",
+        "普通对子纹路可能较浅",
+        "市场仿品与嫁接品较多"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "经典",
+        "入门首选",
+        "矮桩"
+      ]
     },
     {
-      "id": "sizuolou",
-      "name": "四座楼",
-      "alias": ["四楼", "平谷四座楼"],
+      "id": "menjian-shizi",
+      "name": "闷尖狮子",
+      "alias": [
+        "闷尖",
+        "老款闷尖"
+      ],
       "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
-      "origin": "北京平谷",
-      "introduction": "四座楼因产地附近四座古楼而得名，是京派文玩核桃的代表。其纹路方正、楞线分明，桩型多为中矮桩，皮质坚硬，盘玩后色泽深邃。",
-      "history": "四座楼产自北京平谷山区，历史可追溯至清代。旧时作为贡品进献宫廷，与狮子头、公子帽并称京派三大名核。其名字来源于产地村庄附近的四座古老牌楼。",
-      "priceRange": { "min": 500, "max": 15000, "unit": "元/对", "notes": "老树四座楼价格较高，嫁接新树价格相对亲民。" },
-      "identificationTips": ["四道主棱分明，呈方正轮廓", "纹路横平竖直，沟壑较深", "多为中矮桩，底部较平", "皮质硬，密度高", "盘玩后呈深红琥珀色"],
-      "pros": ["皮质优秀，密度高", "纹路规整有气势", "升值潜力大", "京派文化底蕴深厚"],
-      "cons": ["好桩型配对困难", "价格偏高", "新手不易分辨老树与嫁接"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["京派", "经典", "收藏级"]
-    },
-    {
-      "id": "guanmao",
-      "name": "官帽",
-      "alias": ["大官帽", "传统官帽"],
-      "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
-      "origin": "河北、山西",
-      "introduction": "官帽核桃因顶部内凹、形似古代官员帽檐而得名。桩型偏高，棱线挺拔，是麻核桃中极具辨识度的传统品种。",
-      "history": "官帽是北方传统名核之一，与狮子头、公子帽齐名。其名称来源于核桃顶部独特的内凹形态，酷似明清官员所戴官帽。长期以来深受北方玩家青睐。",
-      "priceRange": { "min": 200, "max": 5000, "unit": "元/对", "notes": "高桩官帽价格较低，矮桩精配价格显著上升。" },
-      "identificationTips": ["顶部内凹，形似官帽", "桩型偏高，三围比例修长", "主棱线笔直清晰", "底部多为平底", "纹路纵向延伸明显"],
-      "pros": ["形态独特，辨识度高", "价格区间广，选择多", "盘玩变化丰富"],
-      "cons": ["高桩居多，手感不如矮桩", "顶部易磕碰", "精品矮桩官帽稀少"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["传统", "高桩", "入门"]
-    },
-    {
-      "id": "gongzimao",
-      "name": "公子帽",
-      "alias": ["小公子", "老款公子"],
-      "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
+      "secondaryCategory": "shizitou-class",
       "origin": "河北涞水",
-      "introduction": "公子帽尖部内凹、两侧微翘，整体线条秀气，如同贵公子的帽饰。相比官帽更加秀美，是追求雅致风格玩家的热门之选。",
-      "history": "公子帽与官帽同源，但形态更为精致秀气。旧时文人雅士偏爱此品种，取其清秀脱俗之意。现代文玩市场中，公子帽因其独特美感持续走热。",
-      "priceRange": { "min": 400, "max": 10000, "unit": "元/对", "notes": "老款涞水公子帽价格坚挺，新品嫁接相对便宜。" },
-      "identificationTips": ["尖部内凹且两侧上翘", "整体线条流畅秀气", "纹路细密，皮质细腻", "桩型中等，偏矮桩为佳", "底部平整，配对难度高"],
-      "pros": ["外形秀美，极具观赏性", "皮质细腻", "文化寓意好", "适合精致收藏"],
-      "cons": ["配对难度大", "尖部易损", "市场鱼龙混杂"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["秀气", "文人风", "收藏"]
+      "introduction": "闷尖狮子是狮子头中的传统名品，尖部短钝内收，整体矮桩大肚。其皮质细腻油润，盘玩后色泽红润，是资深玩家心中的经典款。",
+      "history": "闷尖狮子在涞水产区有百年以上栽培历史，旧时与四座楼、公子帽并称涞水三大名核。因其桩型完美、配对极难，历来是收藏市场的硬通货。",
+      "priceRange": {
+        "min": 800,
+        "max": 20000,
+        "notes": "老树闷尖价格极高，嫁接新树相对亲民但皮质有差距。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "尖部短钝，几乎与肩部齐平",
+        "矮桩大肚，轮廓浑圆",
+        "纹路肉头饱满，沟壑较浅",
+        "底部多平底，三围匀称",
+        "皮质油润，密度中高"
+      ],
+      "pros": [
+        "桩型经典，收藏价值高",
+        "皮质优秀",
+        "包浆后色泽深邃",
+        "市场认知度极高"
+      ],
+      "cons": [
+        "价格昂贵",
+        "配对难度极大",
+        "老树与新树难辨"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "收藏级",
+        "经典",
+        "涞水"
+      ]
     },
     {
-      "id": "mantianxing",
-      "name": "满天星",
-      "alias": ["百花", "繁星"],
+      "id": "baishizi",
+      "name": "白狮子",
+      "alias": [
+        "白狮",
+        "奶油狮"
+      ],
       "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北涞水",
+      "introduction": "白狮子因出皮时颜色浅白、后期走色偏红亮而得名。纹路规整舒展，桩型多为矮桩，是狮子头家族中颜值与手感兼备的热门品种。",
+      "history": "白狮子是近二十年在狮子头选育中脱颖而出的色系分支，并非独立古老品种。凭借干净的底色与稳定的走色表现，迅速成为新手与进阶玩家的热门之选。",
+      "priceRange": {
+        "min": 400,
+        "max": 6000,
+        "notes": "皮色干净、六面精配的对子溢价明显。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "出皮颜色浅白或米黄",
+        "纹路舒展，肉头明显",
+        "矮桩居多，大肚平底",
+        "走色后偏深红或琥珀色",
+        "棱线清晰但不突兀"
+      ],
+      "pros": [
+        "底色干净，走色漂亮",
+        "价格适中",
+        "选择面广",
+        "适合长期盘玩"
+      ],
+      "cons": [
+        "部分个体皮质偏软",
+        "精品配对仍不易",
+        "染色仿品需警惕"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "热门",
+        "色系",
+        "狮子头"
+      ]
+    },
+    {
+      "id": "hongshizi",
+      "name": "红狮子",
+      "alias": [
+        "红狮",
+        "深红狮"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
       "origin": "河北",
-      "introduction": "满天星因纹路细碎密集、如繁星点点而得名。纹路深邃复杂，盘玩后立体感极强，是追求纹路美感玩家的首选品种之一。",
-      "history": "满天星是近代文玩市场中崛起的品种，以其独特的细碎纹路在玩家群体中迅速流行。虽历史不及狮子头悠久，但凭借视觉冲击力成为热门品类。",
-      "priceRange": { "min": 300, "max": 6000, "unit": "元/对", "notes": "纹路越细密均匀价格越高。" },
-      "identificationTips": ["纹路细碎如繁星密布", "沟壑深邃，立体感强", "整体桩型多为中桩", "皮质中等偏硬", "六面纹路均匀为佳"],
-      "pros": ["纹路极具观赏性", "盘玩后立体感强", "价格适中", "选择面广"],
-      "cons": ["清理纹路较费力", "部分个体皮质偏干", "仿品较多"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["纹路控", "热门", "麻核桃"]
-    },
-    {
-      "id": "jixin",
-      "name": "鸡心",
-      "alias": ["大鸡心", "小鸡心"],
-      "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
-      "origin": "河北、山西",
-      "introduction": "鸡心核桃整体轮廓如鸡心形，上尖下宽，纹路简洁流畅。桩型偏高但手感舒适，是性价比极高的入门与日常把玩品种。",
-      "history": "鸡心是最亲民的传统名核之一，产地广泛、产量较大。虽不如狮子头名贵，但在民间把玩历史中占有重要地位，被誉为'玩家之友'。",
-      "priceRange": { "min": 100, "max": 2000, "unit": "元/对", "notes": "性价比极高，精品对子也在千元以内。" },
-      "identificationTips": ["整体轮廓如鸡心，上尖下圆", "纹路简洁，主棱明显", "桩型偏高", "三围匀称", "皮质中等，上手轻盈"],
-      "pros": ["价格实惠", "产量大，选择多", "适合日常盘玩", "新手友好"],
-      "cons": ["桩型偏高", "收藏价值不如顶级名核", "精品比例较低"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["性价比", "入门", "日常"]
-    },
-    {
-      "id": "hutou",
-      "name": "虎头",
-      "alias": ["大虎头", "麦穗虎头"],
-      "primaryCategory": "mahe",
-      "secondaryCategory": "classic",
-      "origin": "河北",
-      "introduction": "虎头核桃纹路狂野、棱角分明，形似猛虎之额。皮质粗犷有力，盘玩后气势雄浑，深受喜欢硬朗风格的玩家追捧。",
-      "history": "虎头核桃因野性十足的纹路在玩家中独树一帜。虽非古代贡品名核，但在现代文玩发展中凭借强烈的视觉张力成为一线品种。",
-      "priceRange": { "min": 400, "max": 8000, "unit": "元/对", "notes": "纹路越狂野、配对越精价格越高。" },
-      "identificationTips": ["纹路狂野，棱角分明", "整体气势雄浑", "皮质粗犷坚硬", "多为中高桩", "沟壑深浅变化大"],
-      "pros": ["视觉冲击力强", "皮质硬，耐久性好", "个性鲜明", "盘玩成就感高"],
-      "cons": ["配对极难", "清理纹路费时", "不适合追求圆润手感的玩家"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["硬朗", "个性", "麻核桃"]
-    },
-    {
-      "id": "nanjiangshi",
-      "name": "南疆石",
-      "alias": ["南将石", "南疆"],
-      "primaryCategory": "mahe",
-      "secondaryCategory": "regional",
-      "origin": "河北涿鹿",
-      "introduction": "南疆石是近年来热度极高的品种，以皮质极其坚硬、密度超高著称。纹路深邃立体，盘玩后光泽如玉石，被誉为'核桃之王'。",
-      "history": "南疆石产自河北涿鹿南将石村，是近三十年才被广泛认知的品种。因其卓越的皮质迅速在高端市场中占据一席之地，价格连年攀升。",
-      "priceRange": { "min": 1000, "max": 50000, "unit": "元/对", "notes": "精品南疆石是文玩核桃价格天花板之一。" },
-      "identificationTips": ["皮质极其坚硬，密度极高", "纹路深邃，块状突起明显", "敲击声清脆如石", "底色多为深褐色", "桩型以矮桩为佳"],
-      "pros": ["皮质顶级", "密度超高，保值性强", "盘玩后如玉", "高端收藏首选"],
-      "cons": ["价格昂贵", "盘玩周期长", "市场假货与染色品泛滥"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["高端", "收藏级", "硬核"]
+      "introduction": "红狮子以天然深红皮色著称，无需过度打底即可呈现红润质感。纹路多为经典狮子头肉纹，整体气势浑厚。",
+      "history": "红狮子在狮子头选育中侧重皮色表现，是色系分类而非单一古老品种。北方产区均有类似深红皮色的狮子头个体，市场统称红狮子。",
+      "priceRange": {
+        "min": 500,
+        "max": 8000,
+        "notes": "皮色自然深红、无修补的精品价格更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "出皮即呈深红或枣红色",
+        "纹路圆润饱满如狮子头",
+        "矮桩大肚，棱线分明",
+        "皮质硬实，密度较高",
+        "避免化学染色，看毛孔自然"
+      ],
+      "pros": [
+        "天然红皮，打底压力小",
+        "视觉冲击力强",
+        "皮质普遍较好",
+        "盘玩成就感高"
+      ],
+      "cons": [
+        "好皮色个体比例不高",
+        "价格随皮色溢价",
+        "需辨认真假染色"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "红皮",
+        "狮子头",
+        "热门"
+      ]
     },
     {
       "id": "mopan",
       "name": "磨盘",
-      "alias": ["大磨盘", "矮磨盘"],
+      "alias": [
+        "大磨盘",
+        "矮磨盘"
+      ],
       "primaryCategory": "mahe",
-      "secondaryCategory": "regional",
+      "secondaryCategory": "shizitou-class",
       "origin": "河北",
       "introduction": "磨盘核桃底部宽大扁平，形如石磨盘。矮桩大肚，握感极佳，是追求手感舒适度玩家的热门选择。",
-      "history": "磨盘因独特的底部形态在玩家中获得了'手感之王'的美誉。虽历史记载不多，但在当代文玩市场中凭借出色的把放手感迅速走红。",
-      "priceRange": { "min": 500, "max": 12000, "unit": "元/对", "notes": "矮桩大肚精配价格较高。" },
-      "identificationTips": ["底部宽大如磨盘", "矮桩大肚，握感饱满", "纹路相对平缓", "皮质细腻油润", "三围比例接近圆形"],
-      "pros": ["手感极佳", "矮桩大肚讨喜", "皮质油润", "适合长期把玩"],
-      "cons": ["纹路观赏性一般", "精品配对难", "价格逐年上涨"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["手感", "矮桩", "热门"]
+      "history": "磨盘因独特的底部形态在玩家中获得了手感之王的美誉。虽历史记载不多，但在当代文玩市场中凭借出色的把放手感迅速走红。",
+      "priceRange": {
+        "min": 500,
+        "max": 12000,
+        "notes": "矮桩大肚精配价格较高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "底部宽大如磨盘",
+        "矮桩大肚，握感饱满",
+        "纹路相对平缓",
+        "皮质细腻油润",
+        "三围比例接近圆形"
+      ],
+      "pros": [
+        "手感极佳",
+        "矮桩大肚讨喜",
+        "皮质油润",
+        "适合长期把玩"
+      ],
+      "cons": [
+        "纹路观赏性一般",
+        "精品配对难",
+        "价格逐年上涨"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "手感",
+        "矮桩",
+        "热门"
+      ]
     },
     {
-      "id": "yabaxiang",
-      "name": "鸭巴掌",
-      "alias": ["鸭掌", "巴掌"],
+      "id": "pingguoyuan",
+      "name": "苹果园",
+      "alias": [
+        "苹果",
+        "圆苹果"
+      ],
       "primaryCategory": "mahe",
-      "secondaryCategory": "regional",
+      "secondaryCategory": "shizitou-class",
+      "origin": "北京门头沟",
+      "introduction": "苹果园因整体轮廓正圆如苹果而得名，矮桩大肚、纹路细碎均匀。皮质优秀，盘玩后包浆厚重，是京西名核之一。",
+      "history": "苹果园产自北京门头沟苹果园村，与四座楼同属京派名核体系。近三十年来因桩型讨喜、皮质稳定，在收藏与日常把玩市场均占据重要地位。",
+      "priceRange": {
+        "min": 600,
+        "max": 15000,
+        "notes": "门头沟老树苹果园价格坚挺，嫁接品价格较低。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "整体轮廓正圆如苹果",
+        "矮桩大肚，底部平整",
+        "纹路细碎均匀",
+        "皮质硬，密度高",
+        "六面观察接近正圆"
+      ],
+      "pros": [
+        "桩型讨喜，手感好",
+        "皮质优秀",
+        "京派文化底蕴",
+        "保值性较强"
+      ],
+      "cons": [
+        "精品稀少",
+        "老树新树难辨",
+        "价格偏高"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "京派",
+        "矮桩",
+        "收藏"
+      ]
+    },
+    {
+      "id": "sizuolou",
+      "name": "四座楼",
+      "alias": [
+        "四楼",
+        "平谷四座楼"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "北京平谷",
+      "introduction": "四座楼因产地附近四座古楼而得名，是京派文玩核桃的代表。其纹路方正、楞线分明，桩型多为中矮桩，皮质坚硬，盘玩后色泽深邃。",
+      "history": "四座楼产自北京平谷山区，历史可追溯至清代。旧时作为贡品进献宫廷，与狮子头、公子帽并称京派三大名核。",
+      "priceRange": {
+        "min": 500,
+        "max": 15000,
+        "notes": "老树四座楼价格较高，嫁接新树价格相对亲民。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "四道主棱分明，呈方正轮廓",
+        "纹路横平竖直，沟壑较深",
+        "多为中矮桩，底部较平",
+        "皮质硬，密度高",
+        "盘玩后呈深红琥珀色"
+      ],
+      "pros": [
+        "皮质优秀，密度高",
+        "纹路规整有气势",
+        "升值潜力大",
+        "京派文化底蕴深厚"
+      ],
+      "cons": [
+        "好桩型配对困难",
+        "价格偏高",
+        "新手不易分辨老树与嫁接"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "京派",
+        "经典",
+        "收藏级"
+      ]
+    },
+    {
+      "id": "nanjiangshi",
+      "name": "南疆石",
+      "alias": [
+        "南将石",
+        "南疆"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北涿鹿",
+      "introduction": "南疆石以皮质极其坚硬、密度超高著称。纹路深邃立体，盘玩后光泽如玉石，被誉为核桃之王。",
+      "history": "南疆石产自河北涿鹿南将石村，是近三十年才被广泛认知的品种。因其卓越的皮质迅速在高端市场中占据一席之地，价格连年攀升。",
+      "priceRange": {
+        "min": 1000,
+        "max": 50000,
+        "notes": "精品南疆石是文玩核桃价格天花板之一。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "皮质极其坚硬，密度极高",
+        "纹路深邃，块状突起明显",
+        "敲击声清脆如石",
+        "底色多为深褐色",
+        "桩型以矮桩为佳"
+      ],
+      "pros": [
+        "皮质顶级",
+        "密度超高，保值性强",
+        "盘玩后如玉",
+        "高端收藏首选"
+      ],
+      "cons": [
+        "价格昂贵",
+        "盘玩周期长",
+        "市场假货与染色品泛滥"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "高端",
+        "收藏级",
+        "硬核"
+      ]
+    },
+    {
+      "id": "mantianxing",
+      "name": "满天星",
+      "alias": [
+        "百花",
+        "繁星"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北",
+      "introduction": "满天星因纹路细碎密集、如繁星点点而得名。纹路深邃复杂，盘玩后立体感极强，是追求纹路美感玩家的首选品种之一。",
+      "history": "满天星是近代文玩市场中崛起的品种，以其独特的细碎纹路在玩家群体中迅速流行。虽历史不及狮子头悠久，但凭借视觉冲击力成为热门品类。",
+      "priceRange": {
+        "min": 300,
+        "max": 6000,
+        "notes": "纹路越细密均匀价格越高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路细碎如繁星密布",
+        "沟壑深邃，立体感强",
+        "整体桩型多为中桩",
+        "皮质中等偏硬",
+        "六面纹路均匀为佳"
+      ],
+      "pros": [
+        "纹路极具观赏性",
+        "盘玩后立体感强",
+        "价格适中",
+        "选择面广"
+      ],
+      "cons": [
+        "清理纹路较费力",
+        "部分个体皮质偏干",
+        "仿品较多"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "纹路控",
+        "热门",
+        "麻核桃"
+      ]
+    },
+    {
+      "id": "yuanbao",
+      "name": "元宝",
+      "alias": [
+        "金元宝",
+        "矮元宝"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北",
+      "introduction": "元宝核桃整体形如古代元宝，底脐突出、大肚收尖，寓意吉祥。矮桩个体握感舒适，是礼品与收藏兼顾的品种。",
+      "history": "元宝因形似财富象征而在民间广受欢迎，多用于馈赠与把玩。其形态特征在多个产区均有体现，河北涞水、怀来等地均有稳定产出。",
+      "priceRange": {
+        "min": 300,
+        "max": 5000,
+        "notes": "底脐端正、六面匀称的精配价格更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "整体轮廓如元宝，底脐突出",
+        "大肚收尖，寓意吉祥",
+        "矮桩为佳，握感饱满",
+        "纹路多为平缓肉纹",
+        "皮质中等，走色稳定"
+      ],
+      "pros": [
+        "寓意好，适合送礼",
+        "桩型讨喜",
+        "价格适中",
+        "新手友好"
+      ],
+      "cons": [
+        "精品配对不易",
+        "部分产区皮质一般",
+        "市场命名较杂"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "吉祥",
+        "礼品",
+        "麻核桃"
+      ]
+    },
+    {
+      "id": "miwen",
+      "name": "密纹",
+      "alias": [
+        "蚂蚁纹",
+        "细纹"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北",
+      "introduction": "密纹核桃以纹路极其细密、如蚂蚁爬行痕迹著称。沟壑多而浅，盘玩后呈现细腻质感，是纹路控玩家的小众精品。",
+      "history": "密纹并非单一固定品种，而是对细纹路型麻核桃的统称。河北多个产区均有产出，因配对困难与清理费时，在高端小众圈层中颇受欢迎。",
+      "priceRange": {
+        "min": 400,
+        "max": 8000,
+        "notes": "纹路越密越匀、无断纹者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路极细密，如蚂蚁纹",
+        "沟壑多而相对较浅",
+        "桩型多为中矮桩",
+        "皮质需仔细甄别",
+        "六面纹路连贯不断"
+      ],
+      "pros": [
+        "纹路独特，辨识度极高",
+        "盘玩后质感细腻",
+        "小众精品有溢价",
+        "适合资深玩家"
+      ],
+      "cons": [
+        "清理极费工夫",
+        "配对难度大",
+        "新手不易欣赏"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "纹路控",
+        "小众",
+        "精品"
+      ]
+    },
+    {
+      "id": "mati",
+      "name": "马蹄",
+      "alias": [
+        "马蹄狮",
+        "矮马蹄"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北",
+      "introduction": "马蹄核桃底部形如马蹄，整体偏矮扁，棱线有力。纹路深浅适中，皮质硬朗，盘玩后棱角与圆润并存。",
+      "history": "马蹄在狮子头谱系中属于桩型分支，因底部独特形态得名。旧时北方玩家以马蹄桩型评价核桃把玩得是否贴手，现代市场中仍有一批忠实拥趸。",
+      "priceRange": {
+        "min": 350,
+        "max": 6000,
+        "notes": "矮扁马蹄桩、皮质硬实者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "底部形如马蹄，前窄后宽",
+        "整体偏矮扁",
+        "棱线清晰有力",
+        "纹路深浅变化明显",
+        "皮质偏硬，上手沉"
+      ],
+      "pros": [
+        "桩型独特",
+        "手感贴手",
+        "皮质耐用",
+        "个性鲜明"
+      ],
+      "cons": [
+        "高桩个体较多",
+        "精品比例不高",
+        "知名度低于顶级名核"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "桩型",
+        "个性",
+        "麻核桃"
+      ]
+    },
+    {
+      "id": "pingding",
+      "name": "平顶",
+      "alias": [
+        "平头狮",
+        "齐顶狮"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北",
+      "introduction": "平顶狮子头顶部平齐，无明显尖突，整体轮廓更加浑圆。矮桩大肚个体颇受欢迎，盘玩后包浆均匀。",
+      "history": "平顶是狮子头选育中对尖部形态的要求，顶平齐、肩宽圆者为上选。这一标准在涞水、怀来等产区长期被老玩家沿用，形成稳定审美传统。",
+      "priceRange": {
+        "min": 400,
+        "max": 7000,
+        "notes": "顶平齐、六面精配的矮桩对子溢价明显。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "顶部平齐，尖部不明显",
+        "矮桩大肚，轮廓浑圆",
+        "纹路肉头饱满",
+        "底部多平底",
+        "皮质细腻度因树而异"
+      ],
+      "pros": [
+        "桩型浑圆讨喜",
+        "顶平不易磕损",
+        "适合长期把玩",
+        "狮子头体系经典款"
+      ],
+      "cons": [
+        "真正顶平个体不多",
+        "与闷尖易混淆",
+        "精品价高"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "狮子头",
+        "矮桩",
+        "经典"
+      ]
+    },
+    {
+      "id": "maisui-hutou",
+      "name": "麦穗虎头",
+      "alias": [
+        "麦穗",
+        "长条纹虎头"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "hutou-class",
+      "origin": "河北",
+      "introduction": "麦穗虎头纹路如麦穗般纵向排列，棱线分明，整体气势硬朗。皮质粗犷，盘玩后纹理立体感强，是虎头类代表品种。",
+      "history": "麦穗虎头因纹路特征在虎头家族中最易辨识，是近代文玩市场中虎头类的标杆名称。河北主产区产量稳定，深受喜欢硬朗风格的玩家追捧。",
+      "priceRange": {
+        "min": 500,
+        "max": 10000,
+        "notes": "纹路如麦穗、配对精者价高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路纵向排列如麦穗",
+        "棱线分明，棱角感强",
+        "多为中高桩",
+        "皮质粗犷坚硬",
+        "沟壑深浅对比明显"
+      ],
+      "pros": [
+        "纹路辨识度高",
+        "皮质硬，耐久",
+        "个性张扬",
+        "盘玩成就感强"
+      ],
+      "cons": [
+        "配对极难",
+        "清理纹路费时",
+        "不适合追求圆润者"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "虎头",
+        "硬朗",
+        "热门"
+      ]
+    },
+    {
+      "id": "panlong-hutou",
+      "name": "盘龙虎头",
+      "alias": [
+        "盘龙",
+        "龙纹虎头"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "hutou-class",
+      "origin": "河北",
+      "introduction": "盘龙虎头纹路回旋如龙盘，整体气势更为张扬。在虎头类中属于纹路变化丰富的分支，盘玩后层次极强。",
+      "history": "盘龙虎头名称来自玩家对回旋纹路的形象比喻，并非官方植物学分类。因其独特纹路在虎头爱好者圈层中享有较高声誉。",
+      "priceRange": {
+        "min": 600,
+        "max": 12000,
+        "notes": "龙纹清晰、回转对称者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路回旋盘绕如龙",
+        "棱角分明，气势足",
+        "皮质硬，密度高",
+        "桩型偏高居多",
+        "六面纹路需尽量一致"
+      ],
+      "pros": [
+        "纹路极具张力",
+        "收藏价值在虎头类中较高",
+        "盘玩层次丰富",
+        "辨识度高"
+      ],
+      "cons": [
+        "产量少于麦穗虎头",
+        "配对难度极大",
+        "桩型偏高影响手感"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "虎头",
+        "纹路控",
+        "收藏"
+      ]
+    },
+    {
+      "id": "shihoushou",
+      "name": "狮虎兽",
+      "alias": [
+        "狮虎",
+        "兽头"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "hutou-class",
+      "origin": "河北",
+      "introduction": "狮虎兽融合狮子头圆润与虎头棱角，纹路狂野中带有肉感。是杂交选育与天然变异中的特色类型，个性极强。",
+      "history": "狮虎兽并非严格意义的传统名核，而是玩家对狮、虎两种纹路特征兼而有之个体的俗称。近年来因独特外观在小众市场逐渐走红。",
+      "priceRange": {
+        "min": 400,
+        "max": 8000,
+        "notes": "狮虎特征明显、配对好者溢价高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "兼具狮子头肉纹与虎头棱角",
+        "整体气势混合，个性强",
+        "纹路深浅变化大",
+        "皮质差异明显，需细选",
+        "桩型多为中桩"
+      ],
+      "pros": [
+        "外形独特，话题性强",
+        "适合追求个性的玩家",
+        "可玩性高",
+        "小众精品有空间"
+      ],
+      "cons": [
+        "标准不统一",
+        "品质参差不齐",
+        "流通性弱于经典名核"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "杂交",
+        "个性",
+        "虎头"
+      ]
+    },
+    {
+      "id": "hutou",
+      "name": "虎头",
+      "alias": [
+        "大虎头",
+        "经典虎头"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "hutou-class",
+      "origin": "河北",
+      "introduction": "虎头核桃纹路狂野、棱角分明，形似猛虎之额。皮质粗犷有力，盘玩后气势雄浑，是硬朗风格玩家的首选。",
+      "history": "虎头核桃因野性十足的纹路在现代文玩发展中凭借强烈视觉张力成为一线品种。虽非古代贡品名核，但在玩家心中有稳固地位。",
+      "priceRange": {
+        "min": 400,
+        "max": 8000,
+        "notes": "纹路越狂野、配对越精价格越高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路狂野，棱角分明",
+        "整体气势雄浑",
+        "皮质粗犷坚硬",
+        "多为中高桩",
+        "沟壑深浅变化大"
+      ],
+      "pros": [
+        "视觉冲击力强",
+        "皮质硬，耐久性好",
+        "个性鲜明",
+        "盘玩成就感高"
+      ],
+      "cons": [
+        "配对极难",
+        "清理纹路费时",
+        "不适合追求圆润手感的玩家"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "硬朗",
+        "个性",
+        "麻核桃"
+      ]
+    },
+    {
+      "id": "gongzimao",
+      "name": "公子帽",
+      "alias": [
+        "小公子",
+        "老款公子"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "gongzimao-class",
+      "origin": "河北涞水",
+      "introduction": "公子帽尖部内凹、两侧微翘，整体线条秀气，如同贵公子的帽饰。相比官帽更加秀美，是追求雅致风格玩家的热门之选。",
+      "history": "公子帽与官帽同源，但形态更为精致秀气。旧时文人雅士偏爱此品种，现代文玩市场中因其独特美感持续走热。",
+      "priceRange": {
+        "min": 400,
+        "max": 10000,
+        "notes": "老款涞水公子帽价格坚挺，新品嫁接相对便宜。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "尖部内凹且两侧上翘",
+        "整体线条流畅秀气",
+        "纹路细密，皮质细腻",
+        "桩型中等，偏矮桩为佳",
+        "底部平整，配对难度高"
+      ],
+      "pros": [
+        "外形秀美，极具观赏性",
+        "皮质细腻",
+        "文化寓意好",
+        "适合精致收藏"
+      ],
+      "cons": [
+        "配对难度大",
+        "尖部易损",
+        "市场鱼龙混杂"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "秀气",
+        "文人风",
+        "收藏"
+      ]
+    },
+    {
+      "id": "panshan-gongzimao",
+      "name": "盘山公子帽",
+      "alias": [
+        "盘山公子",
+        "天津公子"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "gongzimao-class",
+      "origin": "天津蓟县",
+      "introduction": "盘山公子帽产自天津盘山一带，相比涞水公子帽桩型略高、纹路更纵展。皮质油润，是津派文玩核桃代表之一。",
+      "history": "盘山公子帽与涞水公子帽同属公子帽谱系，因产区分化而形成地域风格。津派玩家历来重视其秀气桩型与稳定皮质。",
+      "priceRange": {
+        "min": 500,
+        "max": 12000,
+        "notes": "蓟县老树盘山公子帽价高于普通嫁接品。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "尖部内凹，线条秀气",
+        "桩型中等偏高",
+        "纹路纵向延伸明显",
+        "皮质油润细腻",
+        "底部较平整"
+      ],
+      "pros": [
+        "地域名核，有特色",
+        "皮质稳定",
+        "津派文化代表",
+        "收藏潜力较好"
+      ],
+      "cons": [
+        "产量少于涞水公子帽",
+        "配对仍较难",
+        "知名度略逊顶级名核"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "津派",
+        "公子帽",
+        "收藏"
+      ]
+    },
+    {
+      "id": "guanmao",
+      "name": "官帽",
+      "alias": [
+        "大官帽",
+        "传统官帽"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "guanmao-class",
+      "origin": "河北、山西",
+      "introduction": "官帽核桃因顶部内凹、形似古代官员帽檐而得名。桩型偏高，棱线挺拔，是麻核桃中极具辨识度的传统品种。",
+      "history": "官帽是北方传统名核之一，与狮子头、公子帽齐名。其名称来源于核桃顶部独特的内凹形态，酷似明清官员所戴官帽。",
+      "priceRange": {
+        "min": 200,
+        "max": 5000,
+        "notes": "高桩官帽价格较低，矮桩精配价格显著上升。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "顶部内凹，形似官帽",
+        "桩型偏高，三围比例修长",
+        "主棱线笔直清晰",
+        "底部多为平底",
+        "纹路纵向延伸明显"
+      ],
+      "pros": [
+        "形态独特，辨识度高",
+        "价格区间广，选择多",
+        "盘玩变化丰富"
+      ],
+      "cons": [
+        "高桩居多，手感不如矮桩",
+        "顶部易磕碰",
+        "精品矮桩官帽稀少"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "传统",
+        "高桩",
+        "入门"
+      ]
+    },
+    {
+      "id": "wangyong-guanmao",
+      "name": "王勇官帽",
+      "alias": [
+        "王勇",
+        "勇官帽"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "guanmao-class",
+      "origin": "河北",
+      "introduction": "王勇官帽是官帽类中选育出的矮桩分支，以大肚、皮质硬、配对相对容易著称。相比传统高桩官帽，更适合日常把玩。",
+      "history": "王勇官帽因培育者或产区命名而在玩家口耳相传中固定下来，代表官帽类向矮桩、手感方向选育的趋势。近十年在入门与进阶市场颇受欢迎。",
+      "priceRange": {
+        "min": 300,
+        "max": 6000,
+        "notes": "矮桩大肚、皮质硬实者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "官帽顶形，但桩型偏矮",
+        "大肚，握感优于高桩官帽",
+        "棱线挺拔",
+        "皮质较硬，密度不错",
+        "纹路纵向为主"
+      ],
+      "pros": [
+        "相对易配对",
+        "价格适中",
+        "适合官帽爱好者入门",
+        "日常把玩舒适"
+      ],
+      "cons": [
+        "顶级精品仍少",
+        "与高桩官帽审美不同",
+        "命名市场较杂"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "官帽",
+        "矮桩",
+        "热门"
+      ]
+    },
+    {
+      "id": "jixin",
+      "name": "鸡心",
+      "alias": [
+        "大鸡心",
+        "小鸡心"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "jixin-class",
+      "origin": "河北、山西",
+      "introduction": "鸡心核桃整体轮廓如鸡心形，上尖下宽，纹路简洁流畅。桩型偏高但手感舒适，是性价比极高的入门与日常把玩品种。",
+      "history": "鸡心是最亲民的传统名核之一，产地广泛、产量较大。虽不如狮子头名贵，但在民间把玩历史中占有重要地位，被誉为玩家之友。",
+      "priceRange": {
+        "min": 100,
+        "max": 2000,
+        "notes": "性价比极高，精品对子也在千元以内。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "整体轮廓如鸡心，上尖下圆",
+        "纹路简洁，主棱明显",
+        "桩型偏高",
+        "三围匀称",
+        "皮质中等，上手轻盈"
+      ],
+      "pros": [
+        "价格实惠",
+        "产量大，选择多",
+        "适合日常盘玩",
+        "新手友好"
+      ],
+      "cons": [
+        "桩型偏高",
+        "收藏价值不如顶级名核",
+        "精品比例较低"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "性价比",
+        "入门",
+        "日常"
+      ]
+    },
+    {
+      "id": "laoshu-jixin",
+      "name": "老树鸡心",
+      "alias": [
+        "野鸡心",
+        "深山鸡心"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "jixin-class",
+      "origin": "山西、河北山区",
+      "introduction": "老树鸡心来自树龄较长的实生树，皮质更加紧密，走色深沉。相比普通鸡心，密度与油性均有明显提升。",
+      "history": "老树鸡心并非独立品种，而是对高龄树所产鸡心的品质称谓。山区老树上盘玩出的深红包浆，是资深玩家评价鸡心的重要标准。",
+      "priceRange": {
+        "min": 300,
+        "max": 4000,
+        "notes": "确认老树来源、皮质紧密者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "鸡心轮廓，上尖下宽",
+        "皮质紧密，密度高于普通鸡心",
+        "走色深红，油性足",
+        "纹路简洁但有力",
+        "桩型仍偏高但握感沉"
+      ],
+      "pros": [
+        "皮质优于普通鸡心",
+        "价格仍相对亲民",
+        "适合进阶玩家",
+        "老树包浆潜力好"
+      ],
+      "cons": [
+        "仍属高桩",
+        "老树证明难",
+        "产量有限"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "老树",
+        "鸡心",
+        "进阶"
+      ]
+    },
+    {
+      "id": "yabzhang",
+      "name": "鸭巴掌",
+      "alias": [
+        "鸭掌",
+        "巴掌"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "other-mahe",
       "origin": "河北",
       "introduction": "鸭巴掌因底部扁平宽大、整体形如鸭掌而得名。桩型矮扁，握感舒适，纹路舒展，是近年来颇受关注的特色品种。",
       "history": "鸭巴掌是河北产区特色品种，因独特的扁平形态在玩家中逐渐获得认知。其名字形象生动，深受追求个性品种的玩家喜爱。",
-      "priceRange": { "min": 300, "max": 5000, "unit": "元/对", "notes": "矮扁桩型、六面匀称的对子价格更高。" },
-      "identificationTips": ["底部扁平宽大如鸭掌", "整体偏矮扁", "纹路舒展流畅", "握感舒适贴手", "棱线相对柔和"],
-      "pros": ["手感舒适", "外形独特", "价格适中", "适合日常把玩"],
-      "cons": ["知名度不如传统名核", "精品较少", "市场资料有限"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["特色", "手感", "麻核桃"]
+      "priceRange": {
+        "min": 300,
+        "max": 5000,
+        "notes": "矮扁桩型、六面匀称的对子价格更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "底部扁平宽大如鸭掌",
+        "整体偏矮扁",
+        "纹路舒展流畅",
+        "握感舒适贴手",
+        "棱线相对柔和"
+      ],
+      "pros": [
+        "手感舒适",
+        "外形独特",
+        "价格适中",
+        "适合日常把玩"
+      ],
+      "cons": [
+        "知名度不如传统名核",
+        "精品较少",
+        "市场资料有限"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "特色",
+        "手感",
+        "麻核桃"
+      ]
+    },
+    {
+      "id": "luohantou",
+      "name": "罗汉头",
+      "alias": [
+        "罗汉",
+        "罗汉僧"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "other-mahe",
+      "origin": "河北",
+      "introduction": "罗汉头核桃纹路疙疙瘩瘩、突起如罗汉面相，整体轮廓不规则中见趣味。是追求象形与个性玩家的收藏向品种。",
+      "history": "罗汉头因纹路象形而得名，属于麻核桃中的观赏型分支。产量不大，配对困难，但在象形收藏圈层中有稳定受众。",
+      "priceRange": {
+        "min": 400,
+        "max": 8000,
+        "notes": "象形明显、配对好者价高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路突起，略呈罗汉面相",
+        "整体轮廓不规则",
+        "疙瘩纹密集",
+        "皮质中等偏硬",
+        "配对极难但趣味性强"
+      ],
+      "pros": [
+        "象形趣味高",
+        "个性收藏",
+        "话题性强",
+        "独一无二感"
+      ],
+      "cons": [
+        "日常手感一般",
+        "清理费时",
+        "流通性有限"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "象形",
+        "收藏",
+        "小众"
+      ]
+    },
+    {
+      "id": "denglong-mahe",
+      "name": "灯笼(麻)",
+      "alias": [
+        "麻灯笼",
+        "大灯笼"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "other-mahe",
+      "origin": "河北",
+      "introduction": "灯笼(麻)是麻核桃中形似灯笼的特色类型，棱多、肚鼓、整体圆鼓。与秋子灯笼不同，皮质与密度更接近麻核桃体系。",
+      "history": "灯笼形态在麻核桃与秋子中均有出现，麻核桃体系的灯笼因皮质更优而受玩家区分对待。河北等地有专门选育的灯笼型麻核桃。",
+      "priceRange": {
+        "min": 350,
+        "max": 6000,
+        "notes": "棱线均匀、肚圆鼓者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "整体圆鼓如灯笼",
+        "棱线多而均匀",
+        "肚部饱满",
+        "皮质接近麻核桃",
+        "与秋子灯笼相比密度更高"
+      ],
+      "pros": [
+        "外形喜庆",
+        "寓意好",
+        "皮质优于秋子灯笼",
+        "适合礼品与把玩"
+      ],
+      "cons": [
+        "与秋子灯笼易混淆",
+        "精品配对难",
+        "市场命名不统一"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "灯笼",
+        "特色",
+        "麻核桃"
+      ]
     },
     {
       "id": "yunnan-tiehe",
       "name": "云南铁核桃",
-      "alias": ["铁核桃", "云南铁核"],
+      "alias": [
+        "铁核桃",
+        "云南铁核"
+      ],
       "primaryCategory": "tiehe",
-      "secondaryCategory": "yunnan",
+      "secondaryCategory": "yunnan-tiehe",
       "origin": "云南",
       "introduction": "云南铁核桃壳厚质坚，纹路深刻如刀刻，密度远超普通麻核桃。具有独特的金属质感，是资深玩家挑战耐性与质感的品种。",
-      "history": "铁核桃主要分布在云南、四川山区，当地少数民族自古便有把玩铁核桃的习俗。现代文玩市场中，铁核桃以其独特的质感吸引了一批追求个性的玩家。",
-      "priceRange": { "min": 200, "max": 5000, "unit": "元/对", "notes": "纹路越深刻、密度越高价格越贵。" },
-      "identificationTips": ["壳厚质坚，密度极高", "纹路深刻如刀刻", "手感沉重，敲击声沉闷", "颜色偏深褐或黑色", "个头通常较大"],
-      "pros": ["密度顶级", "纹路独特有力量感", "耐磨损", "个性收藏"],
-      "cons": ["盘玩周期极长", "手感偏沉", "市场认知度低于麻核桃"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["铁核桃", "硬核", "个性"]
+      "history": "铁核桃主要分布在云南山区，当地少数民族自古便有把玩铁核桃的习俗。现代文玩市场中，铁核桃以其独特质感吸引追求个性的玩家。",
+      "priceRange": {
+        "min": 200,
+        "max": 5000,
+        "notes": "纹路越深刻、密度越高价格越贵。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "壳厚质坚，密度极高",
+        "纹路深刻如刀刻",
+        "手感沉重，敲击声沉闷",
+        "颜色偏深褐或黑色",
+        "个头通常较大"
+      ],
+      "pros": [
+        "密度顶级",
+        "纹路独特有力量感",
+        "耐磨损",
+        "个性收藏"
+      ],
+      "cons": [
+        "盘玩周期极长",
+        "手感偏沉",
+        "市场认知度低于麻核桃"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "铁核桃",
+        "硬核",
+        "云南"
+      ]
     },
     {
-      "id": "yehe-shan",
-      "name": "山野核桃",
-      "alias": ["野核", "山核桃"],
-      "primaryCategory": "yehe",
-      "secondaryCategory": "wild-classic",
-      "origin": "全国各地山区",
-      "introduction": "山野核桃是自然生长的野生或半野生核桃，形态各异、不可复制。每对都是独一无二的自然造物，具有浓厚的野趣与探索乐趣。",
-      "history": "野核桃的把玩历史远比人工培育品种悠久。古人常以奇形怪状的野核赏玩，取其天然之趣。现代玩家中仍有一批人痴迷于山中寻核的乐趣。",
-      "priceRange": { "min": 50, "max": 3000, "unit": "元/对", "notes": "价格取决于品相稀有度，极品野核也不菲。" },
-      "identificationTips": ["形态不规则，个体差异极大", "纹路自然无规律", "皮质参差不齐", "常带有自然生长痕迹", "配对极为困难"],
-      "pros": ["独一无二", "价格弹性大", "寻核乐趣高", "自然收藏价值"],
-      "cons": ["品质不稳定", "皮质好坏难预判", "无统一鉴定标准"],
-      "images": ["/images/placeholder-walnut.svg"],
-      "tags": ["野趣", "自然", "探索"]
+      "id": "sichuan-tiehe",
+      "name": "四川铁核桃",
+      "alias": [
+        "川铁",
+        "四川铁核"
+      ],
+      "primaryCategory": "tiehe",
+      "secondaryCategory": "yunnan-tiehe",
+      "origin": "四川",
+      "introduction": "四川铁核桃与云南铁核同属铁核桃体系，壳厚纹深、密度高。部分个体棱角更加分明，适合喜欢硬核质感的玩家。",
+      "history": "四川山区自古有采集铁核桃的传统，当地把玩文化历史悠久。现代市场中川铁与云铁常被一并讨论，但纹理与色泽各有地域特点。",
+      "priceRange": {
+        "min": 200,
+        "max": 4500,
+        "notes": "密度高、纹路刀刻感强者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "壳厚，密度高于麻核桃",
+        "纹路深刻，部分呈刀刻状",
+        "色泽偏深",
+        "手感沉，坠手明显",
+        "个头中大"
+      ],
+      "pros": [
+        "硬核把玩体验",
+        "价格相对亲民",
+        "耐磨损",
+        "地域特色明显"
+      ],
+      "cons": [
+        "包浆极慢",
+        "配对不易",
+        "清理纹路费力"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "铁核桃",
+        "四川",
+        "硬核"
+      ]
+    },
+    {
+      "id": "sanleng-tiehe",
+      "name": "三棱铁核",
+      "alias": [
+        "三棱",
+        "三角铁核"
+      ],
+      "primaryCategory": "tiehe",
+      "secondaryCategory": "special-tiehe",
+      "origin": "云南、四川",
+      "introduction": "三棱铁核因天然三棱形态而得名，棱线锋利、结构对称者极为少见。是铁核桃中异形收藏的代表。",
+      "history": "三棱铁核在铁核桃中属自然变异或特殊选育的异形，玩家以棱正、对称、无修为上选。因其稀有性在异形铁核收藏中有较高地位。",
+      "priceRange": {
+        "min": 500,
+        "max": 15000,
+        "notes": "棱正对称、无修尖者价高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "天然三棱结构",
+        "棱线锋利明显",
+        "密度极高",
+        "对称性是关键",
+        "常需仔细检查是否人工修棱"
+      ],
+      "pros": [
+        "稀有性高",
+        "收藏价值大",
+        "话题性强",
+        "硬核玩家目标"
+      ],
+      "cons": [
+        "极难配对",
+        "盘玩扎手需注意",
+        "假货修尖较多"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "异形",
+        "三棱",
+        "收藏"
+      ]
+    },
+    {
+      "id": "sileng-tiehe",
+      "name": "四棱铁核",
+      "alias": [
+        "四棱",
+        "四方铁核"
+      ],
+      "primaryCategory": "tiehe",
+      "secondaryCategory": "special-tiehe",
+      "origin": "云南",
+      "introduction": "四棱铁核拥有四条主棱，整体如小方柱，是铁核桃异形中的高端品类。棱正、肚圆、配对成功者凤毛麟角。",
+      "history": "四棱铁核在铁核桃玩家口中有铁核桃皇者之称，天然四棱且对称者极为罕见。多作为收藏展示，也可长期把玩。",
+      "priceRange": {
+        "min": 800,
+        "max": 30000,
+        "notes": "四棱对称、无修者是天价级别。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "四条主棱清晰可见",
+        "整体如方柱或菱柱",
+        "密度超高",
+        "对称性极难满足",
+        "需防修棱与胶补"
+      ],
+      "pros": [
+        "顶级稀有",
+        "收藏属性强",
+        "视觉冲击独特",
+        "硬核圈层硬通货"
+      ],
+      "cons": [
+        "价格极高",
+        "配对几乎不可能",
+        "盘玩需防棱伤手"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "异形",
+        "四棱",
+        "收藏级"
+      ]
+    },
+    {
+      "id": "yingzui-tiehe",
+      "name": "鹰嘴铁核",
+      "alias": [
+        "鹰嘴",
+        "尖嘴铁核"
+      ],
+      "primaryCategory": "tiehe",
+      "secondaryCategory": "special-tiehe",
+      "origin": "云南、四川",
+      "introduction": "鹰嘴铁核尖部如鹰喙突出，整体形态凌厉。在异形铁核中象形特征明显，是铁核桃收藏的热门方向之一。",
+      "history": "鹰嘴铁核因尖部形态而得名，多出自铁核桃自然变异。玩家追求嘴型对称、无修尖的成对精品，在异形市场中流通性较好。",
+      "priceRange": {
+        "min": 400,
+        "max": 10000,
+        "notes": "嘴型对称、无修尖者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "尖部如鹰喙前突",
+        "整体形态凌厉",
+        "壳厚纹深",
+        "需仔细检查尖部是否原生",
+        "密度高，手感沉"
+      ],
+      "pros": [
+        "象形明显",
+        "异形中较易辨识",
+        "收藏价值好",
+        "个性极强"
+      ],
+      "cons": [
+        "尖部易磕碰",
+        "修尖造假常见",
+        "盘玩需小心"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "异形",
+        "鹰嘴",
+        "铁核"
+      ]
+    },
+    {
+      "id": "fodu-tiehe",
+      "name": "佛肚铁核",
+      "alias": [
+        "佛肚",
+        "肚圆铁核"
+      ],
+      "primaryCategory": "tiehe",
+      "secondaryCategory": "special-tiehe",
+      "origin": "云南",
+      "introduction": "佛肚铁核肚部圆鼓如弥勒佛腹，与鹰嘴等尖形异形形成对比。大肚、矮桩个体尤受玩家欢迎。",
+      "history": "佛肚铁核是铁核桃异形中对肚部形态的审美命名，强调圆润饱满。在铁核桃体系中属于手感与观赏兼顾的类型。",
+      "priceRange": {
+        "min": 350,
+        "max": 8000,
+        "notes": "肚圆鼓、配对好者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "肚部圆鼓如佛腹",
+        "整体多偏矮桩",
+        "壳厚，纹路深刻",
+        "棱线相对柔和",
+        "密度高，坠手"
+      ],
+      "pros": [
+        "手感相对友好",
+        "寓意吉祥",
+        "异形中较适合把玩",
+        "视觉圆润"
+      ],
+      "cons": [
+        "精品配对难",
+        "盘玩仍较慢",
+        "市场量不大"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "异形",
+        "佛肚",
+        "铁核"
+      ]
+    },
+    {
+      "id": "denglong-qiuzi",
+      "name": "灯笼秋子",
+      "alias": [
+        "秋子灯笼",
+        "圆灯笼"
+      ],
+      "primaryCategory": "qiuzi",
+      "secondaryCategory": "lantern-qiuzi",
+      "origin": "东北",
+      "introduction": "灯笼秋子整体圆鼓多棱，形如小灯笼，是秋子中最常见的类型之一。皮质较薄，盘玩轻快，适合入门体验秋子玩法。",
+      "history": "秋子灯笼在东北山区广泛分布，当地玩家自古便有把玩的传统。因其外形喜庆、价格亲民，成为体验秋子文化的首选。",
+      "priceRange": {
+        "min": 30,
+        "max": 800,
+        "notes": "棱匀肚圆、大小适中者即可。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "圆鼓多棱如灯笼",
+        "皮质较薄于麻核桃",
+        "个头中小",
+        "纹路相对浅",
+        "配对看整体轮廓"
+      ],
+      "pros": [
+        "价格亲民",
+        "入门秋子首选",
+        "寓意喜庆",
+        "轻便可日常携带"
+      ],
+      "cons": [
+        "密度低于麻核桃",
+        "收藏价值有限",
+        "皮质差异大"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "秋子",
+        "灯笼",
+        "入门"
+      ]
+    },
+    {
+      "id": "zaohe-qiuzi",
+      "name": "枣核秋子",
+      "alias": [
+        "枣核",
+        "长秋子"
+      ],
+      "primaryCategory": "qiuzi",
+      "secondaryCategory": "jujube-qiuzi",
+      "origin": "华北",
+      "introduction": "枣核秋子形如枣核，细长两尖，是秋子中桩型最修长的类型。纹路简单，盘玩后走色快，适合练手。",
+      "history": "枣核秋子在华北山区常见，因形态与枣核相似而得名。老玩家常用枣核秋子练手与体验不同桩型的盘玩节奏。",
+      "priceRange": {
+        "min": 20,
+        "max": 500,
+        "notes": "细长匀称、无虫眼者为佳。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "细长两尖如枣核",
+        "纹路浅而简单",
+        "桩型高瘦",
+        "皮质薄，上手轻",
+        "配对看长度与弯曲度"
+      ],
+      "pros": [
+        "极低价入门",
+        "走色相对快",
+        "练手合适",
+        "携带方便"
+      ],
+      "cons": [
+        "收藏价值低",
+        "易磕碰尖部",
+        "长期包浆不如麻核桃"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "秋子",
+        "枣核",
+        "练手"
+      ]
+    },
+    {
+      "id": "yingzui-qiuzi",
+      "name": "鹰嘴秋子",
+      "alias": [
+        "鹰嘴秋",
+        "尖秋子"
+      ],
+      "primaryCategory": "qiuzi",
+      "secondaryCategory": "special-qiuzi",
+      "origin": "东北、华北",
+      "introduction": "鹰嘴秋子尖部前突如鹰喙，在秋子中象形特征明显。多为一手秋子中精选的趣味品种，价格略高于普通秋子。",
+      "history": "鹰嘴秋子是玩家对尖形秋子的俗称，强调自然形成的鹰嘴形态。在秋子收藏中属于特色小类，受众以追求象形者为主。",
+      "priceRange": {
+        "min": 50,
+        "max": 1200,
+        "notes": "嘴型对称、无修尖者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "尖部前突如鹰嘴",
+        "秋子皮质，密度一般",
+        "需辨认真假修尖",
+        "整体多为中小桩",
+        "纹路自然无规律"
+      ],
+      "pros": [
+        "象形趣味",
+        "价格仍亲民",
+        "特色秋子代表",
+        "适合秋子进阶"
+      ],
+      "cons": [
+        "密度有限",
+        "修尖造假需警惕",
+        "配对不易"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "秋子",
+        "鹰嘴",
+        "特色"
+      ]
+    },
+    {
+      "id": "taoxin-qiuzi",
+      "name": "桃心秋子",
+      "alias": [
+        "桃心",
+        "心形秋子"
+      ],
+      "primaryCategory": "qiuzi",
+      "secondaryCategory": "special-qiuzi",
+      "origin": "华北",
+      "introduction": "桃心秋子轮廓如桃心，上窄下宽，是秋子中较可爱的形态类型。盘玩轻巧，适合女性玩家与入门者。",
+      "history": "桃心秋子以轮廓命名，在秋子玩家中属于趣味分类。虽无麻核桃名核的历史底蕴，但凭借外形讨喜获得稳定人气。",
+      "priceRange": {
+        "min": 30,
+        "max": 600,
+        "notes": "轮廓端正、左右对称者稍贵。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "轮廓如桃心",
+        "上窄下宽",
+        "皮质薄，上手轻",
+        "纹路浅",
+        "配对看轮廓相似度"
+      ],
+      "pros": [
+        "外形可爱",
+        "价格低",
+        "适合轻盘",
+        "礼品属性"
+      ],
+      "cons": [
+        "长期收藏性一般",
+        "皮质薄易损",
+        "精品标准宽松"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "秋子",
+        "桃心",
+        "趣味"
+      ]
+    },
+    {
+      "id": "shuangbang-qiuzi",
+      "name": "双棒秋子",
+      "alias": [
+        "双棒",
+        "连体秋子"
+      ],
+      "primaryCategory": "qiuzi",
+      "secondaryCategory": "special-qiuzi",
+      "origin": "东北",
+      "introduction": "双棒秋子一对中个体形态如双棒，或同树所出相似度极高的一对，强调整齐对称。是秋子玩家挑战配对的趣味方向。",
+      "history": "双棒秋子在秋子文化中强调成对相似，部分指特定桩型。玩家享受在低价秋子中寻得高度相似对的成就感。",
+      "priceRange": {
+        "min": 40,
+        "max": 1000,
+        "notes": "相似度越高价格越高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "成对个体形态如双棒",
+        "强调高度相似",
+        "秋子自然纹路",
+        "皮质一般",
+        "多为练手与趣味收藏"
+      ],
+      "pros": [
+        "配对乐趣高",
+        "价格不高",
+        "挑战性强",
+        "适合秋子玩家交流"
+      ],
+      "cons": [
+        "无高端收藏价值",
+        "标准主观",
+        "皮质限制包浆上限"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "秋子",
+        "双棒",
+        "趣味"
+      ]
+    },
+    {
+      "id": "yesheng-qiuzi",
+      "name": "野生秋子",
+      "alias": [
+        "野秋子",
+        "山秋子"
+      ],
+      "primaryCategory": "qiuzi",
+      "secondaryCategory": "special-qiuzi",
+      "origin": "全国各地",
+      "introduction": "野生秋子来自自然生长的秋子树，形态各异、不可复制。每对都带有山野气息，是体验寻核乐趣的入门选择。",
+      "history": "野生秋子的把玩历史与山区生活紧密相连，比人工管理的麻核桃更贴近自然。现代玩家仍乐于在集市与山货中寻觅野秋子。",
+      "priceRange": {
+        "min": 10,
+        "max": 800,
+        "notes": "品相稀有度决定价格，极品也不菲。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "形态自然不规则",
+        "个体差异极大",
+        "皮质参差不齐",
+        "常带自然生长痕",
+        "配对全凭眼缘"
+      ],
+      "pros": [
+        "独一无二",
+        "价格弹性大",
+        "寻核乐趣",
+        "自然野趣"
+      ],
+      "cons": [
+        "品质不稳定",
+        "无统一标准",
+        "长期包浆有限"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg"
+      ],
+      "tags": [
+        "野趣",
+        "秋子",
+        "探索"
+      ]
+    },
+    {
+      "id": "mayi-xing",
+      "name": "蚂蚁纹",
+      "alias": [
+        "蚂蚁纹狮",
+        "超细纹"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "other-mahe",
+      "origin": "河北",
+      "introduction": "蚂蚁纹是密纹型麻核桃的通俗叫法，纹路细如蚂蚁足迹，连贯不断。盘玩后呈现细腻质感，是小众纹路爱好者的心头好。",
+      "history": "蚂蚁纹作为玩家口语称谓广泛使用，与密纹、细纹狮子头指代相近。河北产区此类个体需精心配对，在资深圈层中有稳定需求。",
+      "priceRange": {
+        "min": 500,
+        "max": 9000,
+        "notes": "纹路越细越匀价越高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "纹路细如蚂蚁爬行痕迹",
+        "连贯不断为佳",
+        "中矮桩居多",
+        "皮质需仔细挑选",
+        "清理难度高于普通狮子头"
+      ],
+      "pros": [
+        "纹路辨识度极高",
+        "小众精品",
+        "盘玩质感细腻",
+        "适合资深玩家"
+      ],
+      "cons": [
+        "极难清理",
+        "配对困难",
+        "新手不易欣赏"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29_%28cropped%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg"
+      ],
+      "tags": [
+        "纹路控",
+        "小众",
+        "麻核桃"
+      ]
+    },
+    {
+      "id": "huailai-shizi",
+      "name": "怀来狮子",
+      "alias": [
+        "怀来狮",
+        "官山狮"
+      ],
+      "primaryCategory": "mahe",
+      "secondaryCategory": "shizitou-class",
+      "origin": "河北怀来",
+      "introduction": "怀来狮子产自怀来山区，整体符合狮子头肉纹特征，皮质硬实、走色稳定。是河北产区除涞水外的代表性狮子头来源。",
+      "history": "怀来与涞水同属河北文玩核桃核心产区，所产狮子头在历史流通中与涞水狮子头并称。近年来因产量与品质稳定受到市场关注。",
+      "priceRange": {
+        "min": 350,
+        "max": 7000,
+        "notes": "皮质硬、矮桩大肚者价更高。",
+        "unit": "元/对"
+      },
+      "identificationTips": [
+        "狮子头肉纹，轮廓圆润",
+        "皮质硬实",
+        "走色偏深红",
+        "多为中矮桩",
+        "底部较平整"
+      ],
+      "pros": [
+        "产区正宗",
+        "皮质稳定",
+        "价格低于顶级涞水闷尖",
+        "适合进阶收藏"
+      ],
+      "cons": [
+        "名气略逊闷尖",
+        "精品仍需细选",
+        "市场混杂"
+      ],
+      "images": [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4f/A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg/960px-A_pair_of_walnut_%28Juglans_hopeiensis%29.jpg",
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9f/Yixing_ware_handicraft_walnuts.jpg/960px-Yixing_ware_handicraft_walnuts.jpg"
+      ],
+      "tags": [
+        "产区",
+        "狮子头",
+        "河北"
+      ]
     }
   ]
 }

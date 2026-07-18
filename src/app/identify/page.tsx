@@ -178,10 +178,21 @@ export default function IdentifyPage() {
             <p className="font-medium">鉴别失败</p>
             <p className="mt-1 text-sm">{error}</p>
             {error.includes("API") && (
-              <p className="mt-2 text-sm">
-                请复制 <code className="rounded bg-red-100 px-1">.env.example</code> 为{" "}
-                <code className="rounded bg-red-100 px-1">.env.local</code> 并填入 API Key
-              </p>
+              <div className="mt-2 space-y-1 text-sm">
+                <p>
+                  <strong>本地开发：</strong>编辑{" "}
+                  <code className="rounded bg-red-100 px-1">.env.local</code>{" "}
+                  填入 API Key，然后重启 <code className="rounded bg-red-100 px-1">npm run dev</code>
+                </p>
+                <p>
+                  <strong>线上网站：</strong>在 Vercel 或腾讯云云托管的「环境变量」中配置，并重新部署
+                </p>
+                <p>
+                  国内推荐通义千问：{" "}
+                  <code className="rounded bg-red-100 px-1">AI_PROVIDER=dashscope</code> +{" "}
+                  <code className="rounded bg-red-100 px-1">DASHSCOPE_API_KEY</code>
+                </p>
+              </div>
             )}
           </div>
         </div>

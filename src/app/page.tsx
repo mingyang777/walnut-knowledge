@@ -53,9 +53,9 @@ export default function HomePage() {
               品种知识库
             </h3>
             <p className="mt-2 text-sm leading-relaxed text-walnut-600">
-              收录麻核桃、铁核桃、野核桃等 {categories.length} 大品类，
-              含品种介绍、历史渊源、辨认技巧、价格区间与典型图片。
-              支持一级/二级分类筛选与关键词搜索。
+              收录麻核桃、铁核桃、秋子核桃等 {categories.length} 大品类，
+              按狮子头类、虎头类等品种大类精细分类，
+              含介绍、历史渊源、辨认技巧、价格区间与实拍参考图。
             </p>
           </Link>
 

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_SC, Noto_Serif_SC } from "next/font/google";
 import Header from "@/components/Header";
+import { AuthProvider } from "@/components/AuthProvider";
 import "./globals.css";
 
 const notoSans = Noto_Sans_SC({
@@ -28,11 +29,13 @@ export default function RootLayout({
   return (
     <html lang="zh-CN">
       <body className={`${notoSans.variable} ${notoSerif.variable} font-sans`}>
-        <Header />
-        <main className="min-h-[calc(100vh-4rem)]">{children}</main>
-        <footer className="border-t border-walnut-200 bg-walnut-100/50 py-8 text-center text-sm text-walnut-600">
-          <p>文玩核桃知识库 · 传承文化 · 科学鉴别</p>
-        </footer>
+        <AuthProvider>
+          <Header />
+          <main className="min-h-[calc(100vh-4rem)]">{children}</main>
+          <footer className="border-t border-walnut-200 bg-walnut-100/50 py-8 text-center text-sm text-walnut-600">
+            <p>文玩核桃知识库 · 传承文化 · 科学鉴别</p>
+          </footer>
+        </AuthProvider>
       </body>
     </html>
   );
