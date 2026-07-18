@@ -32,8 +32,8 @@ export default function RegisterPage() {
       if (!res.ok) throw new Error(data.error ?? "发送失败");
       setSmsHint(
         data.mock
-          ? "开发模式：验证码可使用环境变量 SMS_MOCK_CODE（默认 123456）"
-          : "验证码已发送"
+          ? data.hint ?? "开发模式：请查看 SMS-SETUP.md 配置真实短信"
+          : "验证码已发送至您的手机，5 分钟内有效"
       );
     } catch (err) {
       setError(err instanceof Error ? err.message : "发送失败");

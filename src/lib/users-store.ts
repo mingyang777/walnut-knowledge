@@ -2,11 +2,13 @@ import { promises as fs } from "fs";
 import path from "path";
 import bcrypt from "bcryptjs";
 import type { User, UsersData } from "@/types/user";
+import {
+  sendVerificationCode,
+  verifyVerificationCode,
+} from "@/lib/sms";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const USERS_FILE = path.join(DATA_DIR, "users.json");
-
-const smsCodes = new Map<string, { code: string; expiresAt: number }>();
 
 async function ensureUsersFile() {
   await fs.mkdir(DATA_DIR, { recursive: true });
@@ -37,28 +39,11 @@ function isValidPhone(phone: string) {
 }
 
 export async function sendSmsCode(phone: string) {
-  if (!isValidPhone(phone)) {
-    throw new Error("手机号格式不正确");
-  }
-  const code =
-    process.env.SMS_MOCK_CODE ??
-    String(Math.floor(100000 + Math.random() * 900000));
-  smsCodes.set(phone, { code, expiresAt: Date.now() + 5 * 60 * 1000 });
-  return { success: true, mock: true, hint: process.env.SMS_MOCK_CODE ? "使用配置的测试验证码" : undefined };
+  return sendVerificationCode(phone);
 }
 
 export function verifySmsCode(phone: string, code: string) {
-  const mockCode = process.env.SMS_MOCK_CODE;
-  if (mockCode && code === mockCode) return true;
-  const record = smsCodes.get(phone);
-  if (!record) return false;
-  if (Date.now() > record.expiresAt) {
-    smsCodes.delete(phone);
-    return false;
-  }
-  const ok = record.code === code;
-  if (ok) smsCodes.delete(phone);
-  return ok;
+  return verifyVerificationCode(phone, code);
 }
 
 export async function registerWithPhone(params: {
