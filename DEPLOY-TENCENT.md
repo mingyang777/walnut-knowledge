@@ -85,6 +85,19 @@ tcb cloudrun deploy --port 3000
 
 配置后 **发布新版本**，流量切到新版本。
 
+### 短信验证码（注册）
+
+| 变量名 | 值 |
+|--------|-----|
+| `SMS_PROVIDER` | `aliyun` |
+| `ALIYUN_ACCESS_KEY_ID` | 阿里云 AccessKey |
+| `ALIYUN_ACCESS_KEY_SECRET` | 阿里云 Secret |
+| `ALIYUN_SMS_SIGN_NAME` | 已审核的短信签名 |
+| `ALIYUN_SMS_TEMPLATE_CODE` | 验证码模板 CODE |
+| `AUTH_SECRET` | 随机长字符串 |
+
+详细步骤见 **[SMS-SETUP.md](./SMS-SETUP.md)**。
+
 ---
 
 ## 五、验证部署
