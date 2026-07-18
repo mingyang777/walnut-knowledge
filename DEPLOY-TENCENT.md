@@ -95,8 +95,23 @@ tcb cloudrun deploy --port 3000
 | `ALIYUN_SMS_SIGN_NAME` | 已审核的短信签名 |
 | `ALIYUN_SMS_TEMPLATE_CODE` | 验证码模板 CODE |
 | `AUTH_SECRET` | 随机长字符串 |
+| `ADMIN_USERNAME` | 后台账号，默认 `admin` |
+| `ADMIN_PASSWORD` | 后台密码（必填，用于 `/admin` 上传实拍图） |
+| `NEXT_PUBLIC_BASE_URL` | 云托管公网域名，如 `https://xxx.tcloudbase.com` |
 
 详细步骤见 **[SMS-SETUP.md](./SMS-SETUP.md)**。
+
+### 实拍图持久化（重要）
+
+上传的图片保存在容器内 `/app/data`。云托管重建版本后若不挂载存储，**图片会丢失**。
+
+建议在云托管服务中为 `/app/data` 挂载持久存储（或对象存储），再发布版本。
+
+后台入口（任意设备访问）：
+
+```
+https://你的云托管域名/admin
+```
 
 ---
 
@@ -105,9 +120,10 @@ tcb cloudrun deploy --port 3000
 浏览器打开云托管给的默认域名，检查：
 
 - [ ] 首页能打开
-- [ ] 知识库 `/knowledge` 能浏览 12 个品种
+- [ ] 知识库 `/knowledge` 能浏览品种
 - [ ] 品种详情页正常
 - [ ] 识图页 `/identify` 能上传图片（需配好 API Key）
+- [ ] `/admin` 可用管理员账号登录并上传实拍图
 
 ---
 

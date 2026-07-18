@@ -3,10 +3,11 @@
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
-import { Loader2 } from "lucide-react";
+import { Loader2, MessageCircle } from "lucide-react";
 import { useAuth } from "@/components/AuthProvider";
+import { PHONE_AUTH_ENABLED } from "@/lib/auth-config";
 
-export default function RegisterPage() {
+function PhoneRegisterForm() {
   const router = useRouter();
   const { refresh } = useAuth();
   const [phone, setPhone] = useState("");
@@ -68,12 +69,7 @@ export default function RegisterPage() {
   };
 
   return (
-    <div className="mx-auto max-w-md px-4 py-12">
-      <h1 className="font-serif text-3xl font-bold text-walnut-900">注册</h1>
-      <p className="mt-2 text-sm text-walnut-600">
-        注册成功将自动生成昵称，可在个人中心修改
-      </p>
-
+    <>
       {error && (
         <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
           {error}
@@ -163,6 +159,40 @@ export default function RegisterPage() {
           去登录
         </Link>
       </p>
+    </>
+  );
+}
+
+export default function RegisterPage() {
+  if (!PHONE_AUTH_ENABLED) {
+    return (
+      <div className="mx-auto max-w-md px-4 py-12">
+        <h1 className="font-serif text-3xl font-bold text-walnut-900">注册</h1>
+        <p className="mt-2 text-sm text-walnut-600">
+          手机号注册暂未开放，请使用微信登录自动创建账号
+        </p>
+
+        <Link href="/api/auth/wechat" className="btn-primary mt-6 w-full py-3">
+          <MessageCircle className="h-5 w-5" />
+          微信授权登录
+        </Link>
+
+        <p className="mt-4 text-center text-sm text-walnut-600">
+          <Link href="/login" className="font-medium text-walnut-800 hover:underline">
+            返回登录页
+          </Link>
+        </p>
+      </div>
+    );
+  }
+
+  return (
+    <div className="mx-auto max-w-md px-4 py-12">
+      <h1 className="font-serif text-3xl font-bold text-walnut-900">注册</h1>
+      <p className="mt-2 text-sm text-walnut-600">
+        注册成功将自动生成昵称，可在个人中心修改
+      </p>
+      <PhoneRegisterForm />
     </div>
   );
 }

@@ -1,12 +1,18 @@
 import Link from "next/link";
 import { BookOpen, Camera, Search, Sparkles } from "lucide-react";
-import { getCategories, getFeaturedVarieties, getVarieties } from "@/lib/knowledge";
+import { getCategories } from "@/lib/knowledge";
+import {
+  getFeaturedVarietiesAsync,
+  getVarietiesAsync,
+} from "@/lib/knowledge-server";
 import VarietyCard from "@/components/VarietyCard";
 
-export default function HomePage() {
-  const allVarieties = getVarieties();
+export const dynamic = "force-dynamic";
+
+export default async function HomePage() {
+  const allVarieties = await getVarietiesAsync();
   const categories = getCategories();
-  const featured = getFeaturedVarieties().slice(0, 6);
+  const featured = (await getFeaturedVarietiesAsync()).slice(0, 6);
 
   return (
     <div>

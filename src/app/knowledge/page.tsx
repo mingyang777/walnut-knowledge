@@ -1,8 +1,13 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useSearchParams } from "next/navigation";
-import { getCategories, searchVarieties, sortVarieties } from "@/lib/knowledge";
+import {
+  applyCustomImages,
+  getCategories,
+  searchVarieties,
+  sortVarieties,
+} from "@/lib/knowledge";
 import SearchFilters from "@/components/SearchFilters";
 import CategoryQuickFilters from "@/components/CategoryQuickFilters";
 import VarietyCard from "@/components/VarietyCard";
@@ -19,6 +24,26 @@ export default function KnowledgePage() {
   );
   const [secondaryCategory, setSecondaryCategory] = useState("");
   const [sort, setSort] = useState<SortOption>("default");
+  const [customMap, setCustomMap] = useState<Record<string, string[]>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    const load = async () => {
+      try {
+        const res = await fetch("/api/variety-images", { cache: "no-store" });
+        const data = await res.json();
+        if (!cancelled) setCustomMap(data.varieties ?? {});
+      } catch {
+        // keep pool images
+      }
+    };
+    load();
+    const timer = setInterval(load, 30_000);
+    return () => {
+      cancelled = true;
+      clearInterval(timer);
+    };
+  }, []);
 
   const results = useMemo(() => {
     const filtered = searchVarieties({
@@ -26,8 +51,8 @@ export default function KnowledgePage() {
       primaryCategory: primaryCategory || undefined,
       secondaryCategory: secondaryCategory || undefined,
     });
-    return sortVarieties(filtered, sort);
-  }, [query, primaryCategory, secondaryCategory, sort]);
+    return applyCustomImages(sortVarieties(filtered, sort), customMap);
+  }, [query, primaryCategory, secondaryCategory, sort, customMap]);
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6 sm:py-12">

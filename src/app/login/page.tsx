@@ -1,72 +1,72 @@
 "use client";
 
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
-import { Suspense, useState } from "react";
-import { Loader2, MessageCircle, Phone } from "lucide-react";
-import { useAuth } from "@/components/AuthProvider";
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+import { MessageCircle, Phone } from "lucide-react";
+import { PHONE_AUTH_ENABLED } from "@/lib/auth-config";
 
 function LoginForm() {
-  const router = useRouter();
   const searchParams = useSearchParams();
-  const { refresh } = useAuth();
-  const [account, setAccount] = useState("");
-  const [password, setPassword] = useState("");
-  const [loading, setLoading] = useState(false);
-  const [error, setError] = useState<string | null>(null);
-
   const urlError = searchParams.get("error");
   const errorMap: Record<string, string> = {
     wechat_cancelled: "已取消微信登录",
-    wechat_not_configured: "微信登录尚未配置，请使用手机号登录",
+    wechat_not_configured:
+      "微信登录尚未配置，请联系管理员在环境变量中设置 WECHAT_APP_ID",
     wechat_failed: "微信登录失败，请重试",
-  };
-
-  const submit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
-    try {
-      const res = await fetch("/api/auth/login", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ account, password }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error ?? "登录失败");
-      await refresh();
-      router.push("/");
-    } catch (err) {
-      setError(err instanceof Error ? err.message : "登录失败");
-    } finally {
-      setLoading(false);
-    }
   };
 
   return (
     <div className="mx-auto max-w-md px-4 py-12">
       <h1 className="font-serif text-3xl font-bold text-walnut-900">登录</h1>
       <p className="mt-2 text-sm text-walnut-600">
-        使用手机号或微信账号名登录
+        请使用微信授权登录，首次登录将自动创建账号
       </p>
 
-      {(error || urlError) && (
+      {urlError && (
         <div className="mt-4 rounded-xl border border-red-200 bg-red-50 p-3 text-sm text-red-700">
-          {error ?? errorMap[urlError!] ?? urlError}
+          {errorMap[urlError] ?? urlError}
         </div>
       )}
 
-      <form onSubmit={submit} className="card mt-6 space-y-4 p-6">
+      <Link href="/api/auth/wechat" className="btn-primary mt-6 w-full py-3 text-base">
+        <MessageCircle className="h-5 w-5" />
+        微信授权登录
+      </Link>
+
+      <p className="mt-3 text-center text-xs text-walnut-500">
+        点击后将跳转微信扫码，授权后自动返回本站
+      </p>
+
+      <div className="relative mt-8">
+        <div className="absolute inset-0 flex items-center">
+          <div className="w-full border-t border-walnut-200" />
+        </div>
+        <div className="relative flex justify-center text-xs">
+          <span className="bg-walnut-50 px-3 text-walnut-400">其他方式</span>
+        </div>
+      </div>
+
+      <div
+        className={`card mt-6 space-y-4 p-6 ${
+          PHONE_AUTH_ENABLED ? "" : "opacity-50"
+        }`}
+        aria-disabled={!PHONE_AUTH_ENABLED}
+      >
+        {!PHONE_AUTH_ENABLED && (
+          <p className="rounded-lg bg-walnut-100 px-3 py-2 text-center text-xs text-walnut-600">
+            手机号登录暂未开放，敬请期待
+          </p>
+        )}
+
         <div>
           <label className="mb-1.5 block text-xs font-medium text-walnut-600">
-            手机号 / 微信账号名
+            手机号 / 账号
           </label>
           <input
-            className="input-field"
-            value={account}
-            onChange={(e) => setAccount(e.target.value)}
-            placeholder="请输入账号"
-            required
+            className="input-field cursor-not-allowed bg-walnut-50"
+            placeholder="暂未开放"
+            disabled
           />
         </div>
         <div>
@@ -75,24 +75,23 @@ function LoginForm() {
           </label>
           <input
             type="password"
-            className="input-field"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-            placeholder="请输入密码"
-            required
+            className="input-field cursor-not-allowed bg-walnut-50"
+            placeholder="暂未开放"
+            disabled
           />
         </div>
-        <button type="submit" disabled={loading} className="btn-primary w-full">
-          {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : "登录"}
+        <button type="button" disabled className="btn-primary w-full opacity-60">
+          手机号登录
         </button>
-      </form>
 
-      <div className="mt-4 grid gap-3">
-        <Link href="/api/auth/wechat" className="btn-secondary w-full">
-          <MessageCircle className="h-4 w-4" />
-          微信授权登录
-        </Link>
-        <Link href="/register" className="btn-secondary w-full">
+        <Link
+          href="/register"
+          className={`btn-secondary w-full ${
+            PHONE_AUTH_ENABLED ? "" : "pointer-events-none opacity-60"
+          }`}
+          tabIndex={PHONE_AUTH_ENABLED ? 0 : -1}
+          aria-disabled={!PHONE_AUTH_ENABLED}
+        >
           <Phone className="h-4 w-4" />
           手机号注册
         </Link>

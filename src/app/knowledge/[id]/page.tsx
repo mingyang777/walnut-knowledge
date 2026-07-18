@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import {
@@ -10,12 +9,13 @@ import {
   Tag,
   XCircle,
 } from "lucide-react";
+import { getCategoryName } from "@/lib/knowledge";
 import {
-  getCategoryName,
-  getRelatedVarieties,
-  getVarietyById,
-} from "@/lib/knowledge";
+  getRelatedVarietiesAsync,
+  getVarietyByIdAsync,
+} from "@/lib/knowledge-server";
 import RelatedVarieties from "@/components/RelatedVarieties";
+import VarietyImage from "@/components/VarietyImage";
 import {
   getVarietyImagePosition,
   IMAGE_ATTRIBUTION,
@@ -25,19 +25,25 @@ interface PageProps {
   params: Promise<{ id: string }>;
 }
 
+export const dynamic = "force-dynamic";
+
 export default async function VarietyDetailPage({ params }: PageProps) {
   const { id } = await params;
-  const variety = getVarietyById(id);
+  const variety = await getVarietyByIdAsync(id);
 
   if (!variety) {
     notFound();
   }
 
-  const related = getRelatedVarieties(id);
+  const related = await getRelatedVarietiesAsync(id);
   const { primary, secondary } = getCategoryName(
     variety.primaryCategory,
     variety.secondaryCategory
   );
+  const isCustomUpload = variety.images.some((src) =>
+    src.startsWith("/api/media/")
+  );
+  const gallery = variety.images.slice(0, 6);
 
   return (
     <div className="mx-auto max-w-4xl px-4 py-8 sm:px-6 sm:py-12">
@@ -50,20 +56,30 @@ export default async function VarietyDetailPage({ params }: PageProps) {
       </Link>
 
       <div className="card overflow-hidden">
-        <div className="grid gap-1 sm:grid-cols-2">
-          {variety.images.slice(0, 2).map((src, index) => (
+        <div
+          className={`grid gap-1 ${
+            gallery.length === 1
+              ? "grid-cols-1"
+              : gallery.length === 2
+                ? "sm:grid-cols-2"
+                : "grid-cols-2 sm:grid-cols-3"
+          }`}
+        >
+          {gallery.map((src, index) => (
             <div
-              key={src}
-              className={`relative bg-walnut-100 ${
-                index === 0 ? "aspect-[4/3] sm:aspect-square" : "aspect-[4/3]"
-              }`}
+              key={`${src}-${index}`}
+              className="relative aspect-[4/3] bg-walnut-100"
             >
-              <Image
+              <VarietyImage
                 src={src}
-                alt={`${variety.name} 参考图 ${index + 1}`}
+                alt={`${variety.name} 实拍图 ${index + 1}`}
                 fill
                 className="object-cover"
-                style={{ objectPosition: getVarietyImagePosition(variety.id) }}
+                style={{
+                  objectPosition: isCustomUpload
+                    ? "center"
+                    : getVarietyImagePosition(variety.id),
+                }}
                 priority={index === 0}
                 sizes="(max-width: 768px) 100vw, 448px"
               />
@@ -71,7 +87,7 @@ export default async function VarietyDetailPage({ params }: PageProps) {
           ))}
         </div>
         <p className="border-b border-walnut-100 px-4 py-2 text-xs text-walnut-500">
-          {IMAGE_ATTRIBUTION}
+          {isCustomUpload ? "品种实拍图" : IMAGE_ATTRIBUTION}
         </p>
 
         <div className="p-6 sm:p-8">

@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
-import { BookOpen, Camera, Home, LogIn, Menu, User, X } from "lucide-react";
+import { BookOpen, Camera, Home, Menu, MessageCircle, User, X } from "lucide-react";
 import { useAuth } from "@/components/AuthProvider";
 
 const navItems = [
@@ -58,8 +58,8 @@ export default function Header() {
               </Link>
             ) : (
               <Link href="/login" className="btn-primary hidden px-3 py-2 text-sm md:inline-flex">
-                <LogIn className="h-4 w-4" />
-                登录
+                <MessageCircle className="h-4 w-4" />
+                微信登录
               </Link>
             )
           )}
@@ -108,8 +108,8 @@ export default function Header() {
                 onClick={() => setMobileOpen(false)}
                 className="mt-1 flex items-center gap-2 rounded-lg px-3 py-3 text-sm font-medium text-walnut-600"
               >
-                <LogIn className="h-4 w-4" />
-                登录 / 注册
+                <MessageCircle className="h-4 w-4" />
+                微信登录
               </Link>
             )
           )}

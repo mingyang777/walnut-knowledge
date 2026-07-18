@@ -26,7 +26,9 @@ RUN addgroup --system --gid 1001 nodejs \
 COPY --from=builder /app/public ./public
 COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
 COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
-RUN mkdir -p /app/data && chown nextjs:nodejs /app/data
+# 用户数据与实拍图上传目录（腾讯云建议挂载持久卷到 /app/data）
+RUN mkdir -p /app/data/uploads/varieties \
+  && chown -R nextjs:nodejs /app/data
 
 USER nextjs
 EXPOSE 3000

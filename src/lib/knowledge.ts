@@ -13,7 +13,7 @@ const FEATURED_IDS = [
   "denglong-qiuzi",
 ];
 
-function withImages(variety: WalnutVariety): WalnutVariety {
+function withPoolImages(variety: WalnutVariety): WalnutVariety {
   return { ...variety, images: getVarietyImagesForId(variety.id, 2) };
 }
 
@@ -21,13 +21,14 @@ export function getCategories(): Category[] {
   return knowledgeBase.categories;
 }
 
+/** 同步版本：仅使用图池（客户端组件可用） */
 export function getVarieties(): WalnutVariety[] {
-  return knowledgeBase.varieties.map(withImages);
+  return knowledgeBase.varieties.map(withPoolImages);
 }
 
 export function getVarietyById(id: string): WalnutVariety | undefined {
   const variety = knowledgeBase.varieties.find((v) => v.id === id);
-  return variety ? withImages(variety) : undefined;
+  return variety ? withPoolImages(variety) : undefined;
 }
 
 export function getFeaturedVarieties(): WalnutVariety[] {
@@ -43,8 +44,7 @@ export function getRelatedVarieties(id: string, limit = 4): WalnutVariety[] {
   return getVarieties()
     .filter(
       (v) =>
-        v.id !== id &&
-        v.secondaryCategory === current.secondaryCategory
+        v.id !== id && v.secondaryCategory === current.secondaryCategory
     )
     .slice(0, limit);
 }
@@ -80,7 +80,10 @@ export function searchVarieties(params: {
   if (query?.trim()) {
     const q = query.trim().toLowerCase();
     results = results.filter((v) => {
-      const { secondary } = getCategoryName(v.primaryCategory, v.secondaryCategory);
+      const { secondary } = getCategoryName(
+        v.primaryCategory,
+        v.secondaryCategory
+      );
       return (
         v.name.toLowerCase().includes(q) ||
         v.alias?.some((a) => a.toLowerCase().includes(q)) ||
@@ -92,7 +95,7 @@ export function searchVarieties(params: {
     });
   }
 
-  return results.map(withImages);
+  return results.map(withPoolImages);
 }
 
 export function sortVarieties(
@@ -120,3 +123,16 @@ export function getVarietySummaryForAI(): string {
     )
     .join("\n");
 }
+
+export function applyCustomImages<T extends { id: string; images: string[] }>(
+  varieties: T[],
+  customMap: Record<string, string[]>
+): T[] {
+  return varieties.map((v) => {
+    const custom = customMap[v.id];
+    if (custom?.length) return { ...v, images: custom };
+    return v;
+  });
+}
+
+export { FEATURED_IDS, withPoolImages };

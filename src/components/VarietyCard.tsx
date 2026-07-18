@@ -1,9 +1,9 @@
 import Link from "next/link";
-import Image from "next/image";
 import { ArrowRight, MapPin } from "lucide-react";
 import type { WalnutVariety } from "@/types/walnut";
 import { getCategoryName } from "@/lib/knowledge";
 import { getVarietyImagePosition } from "@/lib/variety-images";
+import VarietyImage from "@/components/VarietyImage";
 
 interface VarietyCardProps {
   variety: WalnutVariety;
@@ -14,16 +14,21 @@ export default function VarietyCard({ variety }: VarietyCardProps) {
     variety.primaryCategory,
     variety.secondaryCategory
   );
+  const isCustom = variety.images[0]?.startsWith("/api/media/");
 
   return (
     <Link href={`/knowledge/${variety.id}`} className="card group overflow-hidden transition hover:shadow-md">
       <div className="relative aspect-[4/3] overflow-hidden bg-walnut-100">
-        <Image
+        <VarietyImage
           src={variety.images[0]}
           alt={variety.name}
           fill
           className="object-cover transition duration-300 group-hover:scale-105"
-          style={{ objectPosition: getVarietyImagePosition(variety.id) }}
+          style={{
+            objectPosition: isCustom
+              ? "center"
+              : getVarietyImagePosition(variety.id),
+          }}
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>
